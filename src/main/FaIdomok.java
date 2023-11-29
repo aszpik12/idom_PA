@@ -3,13 +3,16 @@ package main;
 import idomok.FaIdom;
 import java.util.List;
 import idomok.FaIdom;
+import idomok.Gomb;
+import idomok.Hasab;
 import java.util.ArrayList;
 
 public class FaIdomok {
 
-    private List idomok;
+    private List<FaIdom> idomok;
 
     public FaIdomok() {
+        run();
     }
     
     public double osszSuly(){
@@ -33,8 +36,12 @@ public class FaIdomok {
     }
     
     public void run(){
-        List a = new ArrayList();
-        a.add(3);
+        idomok = new ArrayList();
+        idomok.add(new Gomb(3));
+        idomok.add(new Gomb(1.5));
+        idomok.add(new Hasab(3, 3, 2));
+        idomok.add(new Hasab(1, 0.5, 6));
+       
     }
     
 }
